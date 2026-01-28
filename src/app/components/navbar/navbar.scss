@@ -1,0 +1,130 @@
+.navbar {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: 2px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 768px) {
+      position: absolute;
+      left: -100%;
+      top: 70px;
+      flex-direction: column;
+      background-color: #1a1a2e;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      padding: 2rem 0;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+      &.active {
+        left: 0;
+      }
+    }
+
+    .nav-item a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-bottom: 0.5rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(135deg, #ff6b6b 0%, #c44569 100%);
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after,
+      &.active::after {
+        width: 100%;
+      }
+
+      &:hover {
+        color: #ff6b6b;
+      }
+
+      &.active {
+        color: #ff6b6b;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    span {
+      width: 25px;
+      height: 3px;
+      margin: 5px 0;
+      background-color: #fff;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    &.active span {
+      &:nth-child(1) {
+        transform: rotate(-45deg) translate(-9px, 8px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    }
+  }
+}

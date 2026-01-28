@@ -1,0 +1,60 @@
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="typing-text">{{ displayedText() }}<span class="cursor"></span></h1>
+      <div class="role-container">
+        <p class="subtitle">
+          <span class="label">I'm a </span>
+          <span class="role" [class.active]="true">{{ rolesList[roles()] }}</span>
+        </p>
+      </div>
+      <p class="description">
+        Specialized in modern frontend development and CMS systems.
+        <br/>
+        Based in Zagreb, Croatia
+      </p>
+      
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-primary">View My Work</a>
+        <a href="mailto:dariomestrovic00@gmail.com" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="animated-shape shape-1"></div>
+      <div class="animated-shape shape-2"></div>
+      <div class="animated-shape shape-3"></div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll to explore</span>
+    <div class="mouse"></div>
+  </div>
+</section>
+
+<section class="skills-preview">
+  <h2 data-aos="fade-up">Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card" data-aos="zoom-in">
+      <div class="skill-icon">💻</div>
+      <h3>Frontend</h3>
+      <p>Angular, React, TypeScript, JavaScript</p>
+    </div>
+    <div class="skill-card" data-aos="zoom-in">
+      <div class="skill-icon">🎨</div>
+      <h3>CMS</h3>
+      <p>AEM, Webflow, WordPress, Contentful</p>
+    </div>
+    <div class="skill-card" data-aos="zoom-in">
+      <div class="skill-icon">⚙️</div>
+      <h3>Tools & Styling</h3>
+      <p>Git & Azure, SCSS, jQuery, JetBrains suite</p>
+    </div>
+    <div class="skill-card" data-aos="zoom-in">
+      <div class="skill-icon">🔧</div>
+      <h3>Web Standards</h3>
+      <p>HTML5, CSS3, REST APIs, RxJS, Accessibility, SEO</p>
+    </div>
+  </div>
+</section>

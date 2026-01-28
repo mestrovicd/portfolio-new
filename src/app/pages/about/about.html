@@ -1,0 +1,126 @@
+<div class="about-page">
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="hero-content">
+      <h1>About Me</h1>
+      <p>Frontend Developer passionate about creating beautiful and functional web experiences & applications</p>
+    </div>
+  </section>
+
+  <!-- Personal Info Section -->
+  <section class="personal-info">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card" data-aos="fade-right">
+          <div class="icon">👤</div>
+          <h3>Who Am I</h3>
+          <p>
+            I'm Dario Meštrović, 26 years old, from Zagreb, Croatia. A passionate frontend developer with a strong foundation in 
+            technical education from Ruđer Bošković technical school. I specialize in modern frontend development and CMS systems,
+            with expertise in Angular, React, and comprehensive web technologies.
+          </p>
+        </div>
+
+        <div class="info-card" data-aos="fade-up">
+          <div class="icon">🎓</div>
+          <h3>Education</h3>
+          <p>
+            <strong>Technical School Ruđer Bošković</strong><br/>
+            Specialized in Information Technology and Computer Science, providing a strong foundation in software development principles.
+          </p>
+        </div>
+
+        <div class="info-card" data-aos="fade-left">
+          <div class="icon">📍</div>
+          <h3>Location</h3>
+          <p>
+            <strong>Zagreb, Croatia</strong><br/>
+            Open to remote & on-site opportunities and collaborations worldwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience">
+    <div class="container">
+      <h2 data-aos="fade-up">Professional Experience</h2>
+      <div class="timeline">
+        @for (exp of experiences; track $index) {
+          <div class="timeline-item" [attr.data-aos]="$index % 2 === 0 ? 'fade-right' : 'fade-left'">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>{{ exp.position }}</h3>
+              <p class="company">{{ exp.company }}</p>
+              <p class="period">{{ exp.period }}</p>
+              <p class="description">{{ exp.description }}</p>
+              <div class="skills-tags">
+                @for (skill of exp.skills; track skill) {
+                  <span class="tag">{{ skill }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Technical Skills</h2>
+      <div class="skills-categories">
+        @for (skillGroup of skills; track skillGroup.category) {
+          <div class="skill-category" data-aos="zoom-in">
+            <h3>{{ skillGroup.category }}</h3>
+            <div class="skill-items">
+              @for (skill of skillGroup.items; track skill) {
+                <div class="skill-item">{{ skill }}</div>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values">
+    <div class="container">
+      <h2 data-aos="fade-up">What I Value</h2>
+      <div class="values-grid">
+        <div class="value-card" data-aos="fade-up">
+          <div class="value-icon">⚡</div>
+          <h3>Performance</h3>
+          <p>Building fast, responsive, and efficient web applications</p>
+        </div>
+        <div class="value-card" data-aos="fade-up">
+          <div class="value-icon">🎯</div>
+          <h3>Quality</h3>
+          <p>Writing clean, maintainable code with best practices</p>
+        </div>
+        <div class="value-card" data-aos="fade-up">
+          <div class="value-icon">🤝</div>
+          <h3>Collaboration</h3>
+          <p>Working efficiently with teams and mentoring others</p>
+        </div>
+        <div class="value-card" data-aos="fade-up">
+          <div class="value-icon">📚</div>
+          <h3>Learning</h3>
+          <p>Continuous growth and staying updated with new technologies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to work together?</h2>
+      <p>Let's create something amazing</p>
+      <a href="mailto:dariomestrovic00@gmail.com" class="btn btn-primary">Send me an email</a>
+    </div>
+  </section>
+</div>

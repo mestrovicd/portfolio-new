@@ -1,0 +1,42 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <a routerLink="/" class="logo">DM</a>
+    </div>
+    
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li class="nav-item">
+        <a routerLink="/" 
+           routerLinkActive="active" 
+           [routerLinkActiveOptions]="{ exact: true }"
+           (click)="closeMenu()">
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/about" 
+           routerLinkActive="active"
+           (click)="closeMenu()">
+          About
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" 
+           (click)="closeMenu(); $event.preventDefault()">
+          Projects
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="mailto:dario@example.com" (click)="closeMenu()">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
