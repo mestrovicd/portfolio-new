@@ -1,0 +1,16 @@
+name = "portfolio-website"
+type = "javascript"
+main = "dist/portfolio-website/server/server.mjs"
+compatibility_date = "2024-12-10"
+
+[env.production]
+name = "portfolio-website-production"
+main = "dist/portfolio-website/server/server.mjs"
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.ts", "src/**/*.html"]
+
+[build.upload]
+format = "service-worker"
